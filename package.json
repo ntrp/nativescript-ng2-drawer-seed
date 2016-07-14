@@ -27,8 +27,10 @@
     "babel-traverse": "6.10.4",
     "babel-types": "6.11.1",
     "babylon": "6.8.4",
+    "html-loader": "^0.4.3",
     "lazy": "1.0.11",
     "nativescript-dev-typescript": "^0.3.2",
+    "nativescript-dev-webpack": "0.0.19",
     "tslint": "^3.13.0",
     "typescript": "^1.8.10"
   }

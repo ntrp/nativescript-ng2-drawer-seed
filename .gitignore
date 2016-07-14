@@ -3,4 +3,7 @@ node_modules/
 platforms/
 *.iml
 *.js
+!hooks/**/*.js
+!app/tns-java-classes.js
+!webpack.config.js
 *.map

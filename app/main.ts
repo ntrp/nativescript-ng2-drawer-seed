@@ -5,7 +5,6 @@ import {RouterOutletMap} from '@angular/router';
 import {NS_ROUTER_PROVIDERS} from 'nativescript-angular/router';
 // telerik UI
 import {SIDEDRAWER_PROVIDERS} from 'nativescript-telerik-ui/sidedrawer/angular';
-import {LISTVIEW_PROVIDERS} from 'nativescript-telerik-ui/listview/angular';
 
 // app
 import {AppComponent} from './app.component';
@@ -15,4 +14,4 @@ import * as native from './utils/native';
 
 native.StatusBar.setColor('#388e3c');
 
-nativeScriptBootstrap(AppComponent, [APP_ROUTES_PROVIDER, NS_ROUTER_PROVIDERS, RouterOutletMap, SIDEDRAWER_PROVIDERS, LISTVIEW_PROVIDERS]);
+nativeScriptBootstrap(AppComponent, [APP_ROUTES_PROVIDER, NS_ROUTER_PROVIDERS, RouterOutletMap, SIDEDRAWER_PROVIDERS]);
