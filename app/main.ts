@@ -11,4 +11,8 @@ import {LISTVIEW_PROVIDERS} from 'nativescript-telerik-ui/listview/angular';
 import {AppComponent} from './app.component';
 import {APP_ROUTES_PROVIDER} from './app.routes';
 
+import * as native from './utils/native';
+
+native.StatusBar.setColor('#388e3c');
+
 nativeScriptBootstrap(AppComponent, [APP_ROUTES_PROVIDER, NS_ROUTER_PROVIDERS, RouterOutletMap, SIDEDRAWER_PROVIDERS, LISTVIEW_PROVIDERS]);
