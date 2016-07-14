@@ -1,0 +1,18 @@
+<ActionBar title="Home">
+</ActionBar>
+<RadSideDrawer #drawer>
+    <template drawerSide>
+        <GridLayout columns="*" rows="*" class="drawer-content">
+            <StackLayout horizzontalAlign="left">
+                <drawer-content></drawer-content>
+            </StackLayout>
+        </GridLayout>
+    </template>
+    <template drawerMain>
+        <StackLayout>
+            <Label text="HOME"></Label>
+            <Button text="Go to Settings" [nsRouterLink]="['/settings']"></Button>
+        </StackLayout>
+    </template>
+</RadSideDrawer>
+<drawer-content></drawer-content>

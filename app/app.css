@@ -1,19 +1,19 @@
-﻿button, label, stack-layout {
-    horizontal-align: center;    
+﻿ActionBar {
+    background-color: #d32f2f;
+    color: white;
 }
 
-button {
-    font-size: 36;
+.drawer-content {
+    background-color: #eeeeee;
+    color: black;
 }
 
-.title {
-    font-size: 30;
-    margin: 20;
+.drawer-content Label {
+    font-size: 20pt;
+    padding: 10pt 0 15pt 25pt;
+    margin: 5pt 0;
 }
 
-.message {
-    font-size: 20;
-    color: #284848;
-    text-align: center;
-    margin: 0 20;
-} 
+.drawer-content Label.selected {
+    background-color: #dddddd;
+}

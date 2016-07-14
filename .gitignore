@@ -1,4 +1,6 @@
-.idea
-node_modules
-platforms
+.idea/
+node_modules/
+platforms/
 *.iml
+*.js
+*.map
