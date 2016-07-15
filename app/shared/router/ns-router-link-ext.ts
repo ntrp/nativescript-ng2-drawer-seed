@@ -47,7 +47,7 @@ export class NSRouterLinkExt {
             this.router.navigate(
                 this.commands,
                 {relativeTo: this.route, queryParams: this.queryParams, fragment: this.fragment});
-        }, drawerOpen ? 400 : 50);
+        }, drawerOpen ? 320 : 20);
     }
 
     private updateTargetUrl():void {
