@@ -17,7 +17,7 @@ export class PageComponent extends Observable implements OnInit {
     }
 
     ngOnInit() {
-        //this.drawerComponent.showOverNavigation = true;
+        this.drawerComponent.showOverNavigation = true;
     }
 
     ngAfterViewInit() {

@@ -1,2 +1,10 @@
-<Label text="Home" [nsRouterLink]="['/home']"></Label>
-<Label text="Settings" [nsRouterLink]="['/settings']"></Label>
+<GridLayout class="drawer-header">
+</GridLayout>
+<Label text="Home"
+       [nsRouterLink]="['/home']"
+       [nsRouterLinkActive]="'current'"
+       [nsRouterLinkDrawer]="drawerComponent"></Label>
+<Label text="Settings"
+       [nsRouterLink]="['/settings']"
+       [nsRouterLinkActive]="'current'"
+       [nsRouterLinkDrawer]="drawerComponent"></Label>

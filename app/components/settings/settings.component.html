@@ -1,17 +1,16 @@
 <ActionBar title="Settings">
 </ActionBar>
-<RadSideDrawer #drawer>
+<RadSideDrawer #drawerComponent>
     <template drawerSide>
-        <GridLayout columns="*" rows="*" class="drawer-content">
+        <ScrollView class="drawer-content">
             <StackLayout horizzontalAlign="left">
-                <drawer-content></drawer-content>
+                <drawer-content [drawerComponent]="drawerComponent"></drawer-content>
             </StackLayout>
-        </GridLayout>
+        </ScrollView>
     </template>
     <template drawerMain>
         <StackLayout>
             <Label text="SETTINGS"></Label>
-            <Button text="Go to Home" [nsRouterLink]="['/home']"></Button>
         </StackLayout>
     </template>
 </RadSideDrawer>

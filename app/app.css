@@ -14,6 +14,11 @@
     margin: 5pt 0;
 }
 
-.drawer-content Label.selected {
+.drawer-content Label.current {
     background-color: #dddddd;
+}
+
+.drawer-content .drawer-header {
+    height: 150pt;
+    background-color: #4caf50;
 }
