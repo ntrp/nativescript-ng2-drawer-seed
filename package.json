@@ -19,7 +19,9 @@
     "@angular/platform-server": "2.0.0-rc.3",
     "@angular/router": "3.0.0-alpha.7",
     "@angular/router-deprecated": "2.0.0-rc.2",
+    "es6-shim": "^0.35.1",
     "nativescript-angular": "0.2.0",
+    "nativescript-meteor": "0.0.6",
     "nativescript-ng2-fonticon": "^1.2.3",
     "nativescript-telerik-ui": "^1.2.0",
     "tns-core-modules": "^2.1.0"

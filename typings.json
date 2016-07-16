@@ -1,0 +1,7 @@
+{
+  "globalDependencies": {
+    "lodash": "registry:dt/lodash#3.10.0+20160619033623",
+    "meteor": "github:meteor-typings/meteor/1.3#955b89a4e2af892d1736bc570b490a97e860d5b7",
+    "zone.js": "npm:zone.js"
+  }
+}
