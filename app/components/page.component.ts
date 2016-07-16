@@ -22,6 +22,13 @@ export class PageComponent extends Observable implements OnInit {
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
+        if (this.drawer.android) {
+            // drawer size fix
+            let layoutParams = this.drawer.drawerContent.android.getLayoutParams();
+            layoutParams.topMargin = 0;
+            layoutParams.bottomMargin = 0;
+            this.drawer.drawerContent.android.setLayoutParams(layoutParams);
+        }
         this.changeDetectionRef.detectChanges();
     }
 
