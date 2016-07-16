@@ -1,4 +1,4 @@
-<ActionBar title="Home">
+<ActionBar title="Todo List">
     <NavigationButton text="Menu" icon="res://ic_menu" (tap)="openDrawer()"></NavigationButton>
 </ActionBar>
 <RadSideDrawer #drawerComponent (drawerOpening)="onDrawerOpening()">
@@ -10,7 +10,7 @@
         </ScrollView>
     </template>
     <template drawerMain>
-        <StackLayout>
+        <StackLayout margin="20" ali>
         </StackLayout>
     </template>
 </RadSideDrawer>

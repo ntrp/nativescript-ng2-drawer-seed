@@ -12,27 +12,27 @@ ActionBar {
   color: black;
 
   .drawer-header {
-    height: 150pt;
+    height: 150px;
     background-color: #4caf50;
-    margin-bottom: 10pt;
+    margin-bottom: 7px;
   }
 
   .drawer-links {
 
     .drawer-link {
-      font-size: 15pt;
-      padding: 10pt;
+      font-size: 15px;
+      padding: 15px;
 
       .fa {
-        font-size: 20pt;
-        margin-right: 10pt;
+        font-size: 20px;
+        margin-right: 10px;
       }
 
       .text {
-        margin-left: 30pt;
+        margin-left: 30px;
       }
     }
-    // nativescript doesn't support multi-class selectors .drawer-link.current
+    // nativescripx doesn't support multi-class selectors .drawer-link.current
     .current {
       background-color: #dddddd;
     }
@@ -41,6 +41,6 @@ ActionBar {
   .drawer-separator {
     height: 1px;
     background-color: #dddddd;
-    margin: 10px 0;
+    margin: 7px 0;
   }
 }

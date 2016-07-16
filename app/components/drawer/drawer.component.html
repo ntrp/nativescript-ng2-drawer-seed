@@ -11,12 +11,20 @@
     </StackLayout>
     <StackLayout class="drawer-link"
                  orientation="horizontal"
+                 [nsRouterLink]="['/todo']"
+                 [nsRouterLinkActive]="'current'"
+                 [nsRouterLinkDrawer]="drawerComponent">
+        <Label class="fa" text="{{'fa-check-square-o' | fonticon}}"></Label>
+        <Label class="text" text="ToDo List"></Label>
+    </StackLayout>
+    <StackLayout class="drawer-separator">
+    </StackLayout>
+    <StackLayout class="drawer-link"
+                 orientation="horizontal"
                  [nsRouterLink]="['/settings']"
                  [nsRouterLinkActive]="'current'"
                  [nsRouterLinkDrawer]="drawerComponent">
         <Label class="fa" text="{{'fa-cogs' | fonticon}}"></Label>
         <Label class="text" text="Settings"></Label>
-    </StackLayout>
-    <StackLayout class="drawer-separator">
     </StackLayout>
 </StackLayout>

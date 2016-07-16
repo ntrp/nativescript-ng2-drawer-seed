@@ -1,17 +1,6 @@
 <ActionBar title="Settings">
-    <NavigationButton text="Menu" icon="res://ic_menu" (tap)="openDrawer()"></NavigationButton>
+    <NavigationButton text="Back" icon="res://ic_back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
-<RadSideDrawer #drawerComponent (drawerOpening)="onDrawerOpening()">
-    <template drawerSide>
-        <ScrollView class="drawer-content">
-            <StackLayout horizzontalAlign="left">
-                <drawer-content [drawerComponent]="drawerComponent"></drawer-content>
-            </StackLayout>
-        </ScrollView>
-    </template>
-    <template drawerMain>
-        <StackLayout>
-            <Label text="SETTINGS"></Label>
-        </StackLayout>
-    </template>
-</RadSideDrawer>
+<StackLayout>
+    <Label text="SETTINGS"></Label>
+</StackLayout>
