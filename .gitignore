@@ -3,5 +3,6 @@ node_modules/
 platforms/
 *.iml
 *.js
+*.css
 !hooks/**/*.js
 *.map

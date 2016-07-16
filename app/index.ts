@@ -14,4 +14,14 @@ import * as native from './utils/native';
 
 native.StatusBar.setColor('#388e3c');
 
-nativeScriptBootstrap(AppComponent, [APP_ROUTES_PROVIDER, NS_ROUTER_PROVIDERS, RouterOutletMap, SIDEDRAWER_PROVIDERS]);
+nativeScriptBootstrap(
+    AppComponent,
+    [
+        APP_ROUTES_PROVIDER,
+        NS_ROUTER_PROVIDERS,
+        RouterOutletMap,
+        SIDEDRAWER_PROVIDERS
+    ],
+    {
+        "cssFile": "app.style.css"
+    });

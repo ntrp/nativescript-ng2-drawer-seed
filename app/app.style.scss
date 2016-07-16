@@ -1,0 +1,24 @@
+﻿ActionBar {
+  background-color: #4caf50;
+  color: white;
+}
+
+.drawer-content {
+  background-color: #eeeeee;
+  color: black;
+
+  .drawer-header {
+    height: 150pt;
+    background-color: #4caf50;
+  }
+
+  Label {
+    font-size: 20pt;
+    padding: 10pt 0 15pt 25pt;
+    margin: 5pt 0;
+
+    &.current {
+      background-color: #dddddd;
+    }
+  }
+}
