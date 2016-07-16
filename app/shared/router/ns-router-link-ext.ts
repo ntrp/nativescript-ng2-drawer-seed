@@ -12,7 +12,7 @@ export class NSRouterLinkExt {
     @Input() target:string;
     @Input() queryParams:{ [k:string]:any };
     @Input() fragment:string;
-    @Input() nsRouterLinkDrawer: any;
+    @Input() nsRouterLinkDrawer:any;
 
     urlTree:UrlTree;
 
@@ -43,7 +43,7 @@ export class NSRouterLinkExt {
             this.nsRouterLinkDrawer.sideDrawer.closeDrawer();
         }
         routerLog("nsRouterLink.tapped: " + this.commands);
-        TimerWrapper.setTimeout(() =>{
+        TimerWrapper.setTimeout(() => {
             this.router.navigate(
                 this.commands,
                 {relativeTo: this.route, queryParams: this.queryParams, fragment: this.fragment});

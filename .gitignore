@@ -3,6 +3,7 @@ node_modules/
 platforms/
 *.iml
 *.js
-*.css
 !hooks/**/*.js
 *.map
+*.css
+!app/fonts/font-awesome.css

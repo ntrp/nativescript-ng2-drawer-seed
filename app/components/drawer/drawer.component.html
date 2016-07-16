@@ -1,10 +1,22 @@
 <GridLayout class="drawer-header">
 </GridLayout>
-<Label text="Home"
-       [nsRouterLink]="['/home']"
-       [nsRouterLinkActive]="'current'"
-       [nsRouterLinkDrawer]="drawerComponent"></Label>
-<Label text="Settings"
-       [nsRouterLink]="['/settings']"
-       [nsRouterLinkActive]="'current'"
-       [nsRouterLinkDrawer]="drawerComponent"></Label>
+<StackLayout class="drawer-links" orientation="vertical">
+    <StackLayout class="drawer-link"
+                 orientation="horizontal"
+                 [nsRouterLink]="['/home']"
+                 [nsRouterLinkActive]="'current'"
+                 [nsRouterLinkDrawer]="drawerComponent">
+        <Label class="fa" text="{{'fa-home' | fonticon}}"></Label>
+        <Label class="text" text="Home"></Label>
+    </StackLayout>
+    <StackLayout class="drawer-link"
+                 orientation="horizontal"
+                 [nsRouterLink]="['/settings']"
+                 [nsRouterLinkActive]="'current'"
+                 [nsRouterLinkDrawer]="drawerComponent">
+        <Label class="fa" text="{{'fa-cogs' | fonticon}}"></Label>
+        <Label class="text" text="Settings"></Label>
+    </StackLayout>
+    <StackLayout class="drawer-separator">
+    </StackLayout>
+</StackLayout>

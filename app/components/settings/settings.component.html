@@ -1,6 +1,7 @@
 <ActionBar title="Settings">
+    <NavigationButton text="Menu" icon="res://ic_menu" (tap)="openDrawer()"></NavigationButton>
 </ActionBar>
-<RadSideDrawer #drawerComponent>
+<RadSideDrawer #drawerComponent (drawerOpening)="onDrawerOpening()">
     <template drawerSide>
         <ScrollView class="drawer-content">
             <StackLayout horizzontalAlign="left">

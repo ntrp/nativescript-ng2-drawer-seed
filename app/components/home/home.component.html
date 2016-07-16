@@ -1,7 +1,8 @@
 <ActionBar title="Home">
+    <NavigationButton text="Menu" icon="res://ic_menu" (tap)="openDrawer()"></NavigationButton>
 </ActionBar>
-<RadSideDrawer #drawerComponent>
-    <template drawerSide >
+<RadSideDrawer #drawerComponent (drawerOpening)="onDrawerOpening()">
+    <template drawerSide>
         <ScrollView class="drawer-content">
             <StackLayout horizzontalAlign="left">
                 <drawer-content [drawerComponent]="drawerComponent"></drawer-content>
@@ -9,9 +10,11 @@
         </ScrollView>
     </template>
     <template drawerMain>
-        <StackLayout>
-            <Label text="HOME"></Label>
-            <Button text="Go to Settings" [nsRouterLink]="['/settings']" [nsRouterLinkDrawer]="drawerComponent"></Button>
+        <StackLayout margin="20" ali>
+            <Label class="fa" [text]="'fa-cogs' | fonticon" fontSize="30"></Label>
+            <Button text="Go to Settings"
+                    [nsRouterLink]="['/settings']"
+                    [nsRouterLinkDrawer]="drawerComponent"></Button>
         </StackLayout>
     </template>
 </RadSideDrawer>

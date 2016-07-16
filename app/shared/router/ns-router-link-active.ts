@@ -1,4 +1,14 @@
-import {AfterContentInit, ContentChildren, Directive, ElementRef, Input, OnChanges, OnDestroy, QueryList, Renderer} from '@angular/core';
+import {
+    AfterContentInit,
+    ContentChildren,
+    Directive,
+    ElementRef,
+    Input,
+    OnChanges,
+    OnDestroy,
+    QueryList,
+    Renderer
+} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
 
 import {NavigationEnd, Router} from '@angular/router/router';
@@ -53,14 +63,14 @@ import {NSRouterLinkExt} from './ns-router-link-ext';
     selector: '[nsRouterLinkActive]'
 })
 export class NSRouterLinkActive implements OnChanges, OnDestroy, AfterContentInit {
-    @ContentChildren(NSRouterLinkExt) links: QueryList<NSRouterLinkExt>;
+    @ContentChildren(NSRouterLinkExt) links:QueryList<NSRouterLinkExt>;
 
-    private classes: string[] = [];
-    private subscription: Subscription;
+    private classes:string[] = [];
+    private subscription:Subscription;
 
-    @Input() private nsRouterLinkActiveOptions: { exact: boolean } = { exact: false };
+    @Input() private nsRouterLinkActiveOptions:{ exact:boolean } = {exact: false};
 
-    constructor(private router: Router, private element: ElementRef, private renderer: Renderer) {
+    constructor(private router:Router, private element:ElementRef, private renderer:Renderer) {
         this.subscription = router.events.subscribe(s => {
             if (s instanceof NavigationEnd) {
                 this.update();
@@ -68,13 +78,13 @@ export class NSRouterLinkActive implements OnChanges, OnDestroy, AfterContentIni
         });
     }
 
-    ngAfterContentInit(): void {
+    ngAfterContentInit():void {
         this.links.changes.subscribe(s => this.update());
         this.update();
     }
 
     @Input("nsRouterLinkActive")
-    set params(data: string[] | string) {
+    set params(data:string[] | string) {
         if (Array.isArray(data)) {
             this.classes = <any>data;
         } else {
@@ -82,10 +92,15 @@ export class NSRouterLinkActive implements OnChanges, OnDestroy, AfterContentIni
         }
     }
 
-    ngOnChanges(changes: {}): any { this.update(); }
-    ngOnDestroy(): any { this.subscription.unsubscribe(); }
+    ngOnChanges(changes:{}):any {
+        this.update();
+    }
 
-    private update(): void {
+    ngOnDestroy():any {
+        this.subscription.unsubscribe();
+    }
+
+    private update():void {
         if (!this.links) return;
 
         const currentUrlTree = this.router.parseUrl(this.router.url);
@@ -95,9 +110,9 @@ export class NSRouterLinkActive implements OnChanges, OnDestroy, AfterContentIni
                 this.element.nativeElement, c, isActiveLinks));
     }
 
-    private reduceList(currentUrlTree: UrlTree, q: QueryList<any>): boolean {
+    private reduceList(currentUrlTree:UrlTree, q:QueryList<any>):boolean {
         return q.reduce(
-            (res: boolean, link: NSRouterLinkExt) =>
+            (res:boolean, link:NSRouterLinkExt) =>
             res || containsTree(currentUrlTree, link.urlTree, this.nsRouterLinkActiveOptions.exact),
             false);
     }

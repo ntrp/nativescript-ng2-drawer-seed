@@ -1,4 +1,8 @@
-﻿ActionBar {
+﻿.fa {
+  font-family: FontAwesome, fontawesome-webfont;
+}
+
+ActionBar {
   background-color: #4caf50;
   color: white;
 }
@@ -10,15 +14,33 @@
   .drawer-header {
     height: 150pt;
     background-color: #4caf50;
+    margin-bottom: 10pt;
   }
 
-  Label {
-    font-size: 20pt;
-    padding: 10pt 0 15pt 25pt;
-    margin: 5pt 0;
+  .drawer-links {
 
-    &.current {
+    .drawer-link {
+      font-size: 15pt;
+      padding: 10pt;
+
+      .fa {
+        font-size: 20pt;
+        margin-right: 10pt;
+      }
+
+      .text {
+        margin-left: 30pt;
+      }
+    }
+    // nativescript doesn't support multi-class selectors .drawer-link.current
+    .current {
       background-color: #dddddd;
     }
+  }
+
+  .drawer-separator {
+    height: 1px;
+    background-color: #dddddd;
+    margin: 10px 0;
   }
 }
