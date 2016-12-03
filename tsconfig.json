@@ -3,8 +3,7 @@
         "module": "commonjs",
         "target": "es5",
         "moduleResolution": "node",
-        "inlineSourceMap": true,
-        "removeComments": false,
+        "sourceMap": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "noEmitHelpers": true,
@@ -12,6 +11,7 @@
     },
     "exclude": [
         "node_modules",
-        "platforms"
+        "platforms",
+        "**/*.aot.ts"
     ]
 }

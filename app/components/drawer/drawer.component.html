@@ -3,17 +3,13 @@
 <StackLayout class="drawer-links" orientation="vertical">
     <StackLayout class="drawer-link"
                  orientation="horizontal"
-                 [nsRouterLink]="['/home']"
-                 [nsRouterLinkActive]="'current'"
-                 [nsRouterLinkDrawer]="drawerComponent">
+                 [nsRouterLink]="['/home']">
         <Label class="fa" text="{{'fa-home' | fonticon}}"></Label>
         <Label class="text" text="Home"></Label>
     </StackLayout>
     <StackLayout class="drawer-link"
                  orientation="horizontal"
-                 [nsRouterLink]="['/todo']"
-                 [nsRouterLinkActive]="'current'"
-                 [nsRouterLinkDrawer]="drawerComponent">
+                 [nsRouterLink]="['/todo']">
         <Label class="fa" text="{{'fa-check-square-o' | fonticon}}"></Label>
         <Label class="text" text="ToDo List"></Label>
     </StackLayout>
@@ -21,9 +17,7 @@
     </StackLayout>
     <StackLayout class="drawer-link"
                  orientation="horizontal"
-                 [nsRouterLink]="['/settings']"
-                 [nsRouterLinkActive]="'current'"
-                 [nsRouterLinkDrawer]="drawerComponent">
+                 [nsRouterLink]="['/settings']">
         <Label class="fa" text="{{'fa-cogs' | fonticon}}"></Label>
         <Label class="text" text="Settings"></Label>
     </StackLayout>

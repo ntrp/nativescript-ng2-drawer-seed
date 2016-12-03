@@ -1,0 +1,13 @@
+<ActionBar title="Home">
+    <NavigationButton text="Menu" icon="res://ic_menu" (tap)="openDrawer()"></NavigationButton>
+</ActionBar>
+<RadSideDrawer #drawerComponent tkToggleNavButton>
+    <ScrollView tkDrawerContent class="drawer-content">
+        <StackLayout horizzontalAlign="left">
+            <drawer-content></drawer-content>
+        </StackLayout>
+    </ScrollView>
+    <StackLayout tkMainContent>
+        <Label text="Home"></Label>
+    </StackLayout>
+</RadSideDrawer>

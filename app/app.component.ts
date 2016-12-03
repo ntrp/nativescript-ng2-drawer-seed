@@ -1,13 +1,8 @@
-import {Component} from '@angular/core';
-import {NS_ROUTER_DIRECTIVES_EXT} from './shared/router/ns-router-ext';
+import {Component} from "@angular/core";
 
 @Component({
-    moduleId: module.id,
     selector: 'app',
-    template: `
-        <page-router-outlet></page-router-outlet>
-    `,
-    directives: [NS_ROUTER_DIRECTIVES_EXT]
+    template: '<page-router-outlet></page-router-outlet>',
 })
 export class AppComponent {
 

@@ -1,5 +1,5 @@
-const application = require('application');
-const platform = require('platform');
+import * as application from "application";
+import * as platform from "platform";
 import {Color} from 'color';
 
 const android = application.android;
