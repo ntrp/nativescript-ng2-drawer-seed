@@ -12,6 +12,6 @@
     "exclude": [
         "node_modules",
         "platforms",
-        "**/*.aot.ts"
+        "app/main.aot.ts"
     ]
 }
