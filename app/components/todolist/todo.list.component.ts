@@ -14,12 +14,19 @@ const Events = new MongoObservable.Collection("events");
 })
 export class TodoListComponent {
 
-    //private todos:{}[] = [{title: 'title1', text: 'text1'}, {title: 'title2', text: 'text2'}];
+    /*
+    private todos:{}[] = [
+        {title: 'title1', description: 'text1'},
+        {title: 'title2', description: 'text2'}
+    ];
+    */
     private todos:any;
 
     ngOnInit(): void {
+
         this.todos = Events
             .find({})
-            .zone();
+            .zone()
+
     }
 }
