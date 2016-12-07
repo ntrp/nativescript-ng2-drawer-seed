@@ -1,32 +1,49 @@
 import {Component} from "@angular/core";
-import {MongoObservable} from "meteor-rxjs";
-
-const Events = new MongoObservable.Collection("events");
+import {Observable} from "rxjs";
+import {Todos} from "../../collection/todos";
+import {Todo} from "../../model/todo";
 
 @Component({
     selector: 'todo-list',
-    template: `
-    <StackLayout orientation="vertical" *ngFor="let todo of todos | async" class="todo-item">
-        <Label [text]="todo.title" fontSize="20"></Label>
-        <Label [text]="todo.description" fontSize="10"></Label>
-    </StackLayout>
-    `
+    templateUrl: 'components/todolist/todo.list.component.html'
 })
 export class TodoListComponent {
 
-    /*
-    private todos:{}[] = [
-        {title: 'title1', description: 'text1'},
-        {title: 'title2', description: 'text2'}
-    ];
-    */
-    private todos:any;
+    private todos: Observable<Todo[]>;
+    private next: Todo;
 
     ngOnInit(): void {
-
-        this.todos = Events
-            .find({})
+        this.initNext();
+        this.todos = Todos
+            .find({}, {sort: {_id: 1}})
             .zone()
+    }
 
+    toggle(todo: Todo): void {
+        Todos.update(todo._id, {
+            $set: {
+                done: !todo.done
+            }
+        })
+    }
+
+    create(todo: Todo): void {
+        if (todo.title) {
+            Todos.insert(todo).zone().subscribe(() => {
+                this.initNext();
+            });
+        }
+    }
+
+    remove(todo: Todo): void {
+        Todos.remove(todo._id);
+    }
+
+    private initNext() {
+        this.next = {
+            title: '',
+            description: '',
+            done: false
+        }
     }
 }

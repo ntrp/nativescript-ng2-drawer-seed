@@ -1,0 +1,87 @@
+/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+For example, the following CSS rule changes the font size of all UI
+components that have the btn class name.
+*/
+.btn {
+    font-size: 18;
+}
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme.
+*/
+@import 'nativescript-theme-core/css/core.light.css';
+
+.fa {
+    font-family: FontAwesome, fontawesome-webfont;
+}
+
+ActionBar {
+    background-color: #4caf50;
+    color: white;
+}
+
+.drawer-content {
+    background-color: #eeeeee;
+    color: black;
+}
+.drawer-content .drawer-header {
+    height: 150px;
+    background-color: #4caf50;
+    margin-bottom: 7px;
+}
+.drawer-content .drawer-links .drawer-link {
+    font-size: 15px;
+    padding: 15px;
+}
+.drawer-content .drawer-links .drawer-link .fa {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.drawer-content .drawer-links .drawer-link .text {
+    margin-left: 30px;
+}
+.drawer-content .drawer-links .current {
+    background-color: #dddddd;
+}
+.drawer-content .drawer-separator {
+    height: 1px;
+    background-color: #dddddd;
+    margin: 7px 0;
+}
+
+.todo-next {
+    padding: 20px;
+}
+
+.todo-next > Button {
+    font-size: 24px;
+}
+
+.todo-next > Button.disabled {
+    color: #999999;
+}
+
+.todo-items {
+    border-top: 1px solid #dddddd;
+}
+
+.todo-item {
+    margin: 20px 20px 0 20px;
+    padding: 10px;
+    background-color: #cccccc;
+}
+
+.checkbox {
+    width: 22px;
+    height: 22px;
+    margin: 0 10px 0 0;
+    horizontal-align: left;
+}

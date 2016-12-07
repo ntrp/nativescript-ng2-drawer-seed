@@ -1,0 +1,14 @@
+<GridLayout columns="*" rows="auto, *">
+    <GridLayout columns="*, auto" row="0" class="todo-next">
+        <TextField col="0" [(ngModel)]="next.title"></TextField>
+        <Button col="1" class="fa" text="{{'fa-plus' | fonticon}}" (tap)="create(next)" [class.disabled]="!next.title"></Button>
+    </GridLayout>
+    <ScrollView row="1">
+        <StackLayout orientation="vertical" class="todo-items">
+            <GridLayout columns="auto, *, auto" *ngFor="let todo of todos | async" class="todo-item" (doubleTap)="remove(todo)">
+                <Checkbox col="0" [checked]="todo.done" (tap)="toggle(todo)"></Checkbox>
+                <Label col="1" [text]="todo.title" [class.done]="todo.done"></Label>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

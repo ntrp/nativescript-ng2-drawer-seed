@@ -5,5 +5,3 @@ platforms/
 *.js
 !hooks/**/*.js
 *.map
-*.css
-!app/fonts/font-awesome.css

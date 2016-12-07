@@ -2,7 +2,7 @@
 import {platformNativeScriptDynamic} from "nativescript-angular/platform";
 
 require('nativescript-ng2-meteor/dist/meteor/index')({
-    url: 'http://vdc.nerdpol.ovh:3000'
+    url: 'http://127.0.0.1:3000'
 });
 
 import {AppModule} from "./app.module";
