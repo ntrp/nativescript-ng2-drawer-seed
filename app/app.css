@@ -32,25 +32,31 @@ ActionBar {
     background-color: #eeeeee;
     color: black;
 }
+
 .drawer-content .drawer-header {
     height: 150px;
     background-color: #4caf50;
     margin-bottom: 7px;
 }
+
 .drawer-content .drawer-links .drawer-link {
     font-size: 15px;
     padding: 15px;
 }
+
 .drawer-content .drawer-links .drawer-link .fa {
     font-size: 20px;
     margin-right: 10px;
 }
+
 .drawer-content .drawer-links .drawer-link .text {
     margin-left: 30px;
 }
+
 .drawer-content .drawer-links .current {
     background-color: #dddddd;
 }
+
 .drawer-content .drawer-separator {
     height: 1px;
     background-color: #dddddd;
@@ -69,14 +75,23 @@ ActionBar {
     color: #999999;
 }
 
-.todo-items {
-    border-top: 1px solid #dddddd;
+.todo-filter {
+    padding: 20px;
+}
+
+.todo-filter > Label {
+    text-align: center;
+}
+
+.todo-filter > Label.active {
+    color: #19469D;
+    font-weight: bold;
 }
 
 .todo-item {
     margin: 20px 20px 0 20px;
     padding: 10px;
-    background-color: #cccccc;
+
 }
 
 .checkbox {
@@ -84,4 +99,22 @@ ActionBar {
     height: 22px;
     margin: 0 10px 0 0;
     horizontal-align: left;
+}
+
+@keyframes glow {
+    0% {
+        background-color: #eeeeee;
+    }
+    50% {
+        background-color: #b7b7b7;
+    }
+    100% {
+        background-color: #eeeeee;
+    }
+}
+
+.anim {
+    animation-name: glow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }

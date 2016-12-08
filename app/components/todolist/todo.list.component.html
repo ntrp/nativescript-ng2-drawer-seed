@@ -1,11 +1,20 @@
-<GridLayout columns="*" rows="auto, *">
+<GridLayout columns="*" rows="auto, auto, *">
     <GridLayout columns="*, auto" row="0" class="todo-next">
         <TextField col="0" [(ngModel)]="next.title"></TextField>
-        <Button col="1" class="fa" text="{{'fa-plus' | fonticon}}" (tap)="create(next)" [class.disabled]="!next.title"></Button>
+        <Button class="fa" [class.disabled]="!next.title" col="1"
+                text="{{'fa-plus' | fonticon}}"
+                (tap)="create(next)"></Button>
     </GridLayout>
-    <ScrollView row="1">
+    <GridLayout row="1" columns="*, *, *" class="todo-filter">
+        <Label col="0" text="All ({{total()}})" [class.active]="filter == 'all'" (tap)="setFilter('all')"></Label>
+        <Label col="1" text="Active" [class.active]="filter == 'active'" (tap)="setFilter('active')"></Label>
+        <Label col="2" text="Done" [class.active]="filter == 'done'" (tap)="setFilter('done')"></Label>
+    </GridLayout>
+    <ScrollView row="2">
         <StackLayout orientation="vertical" class="todo-items">
-            <GridLayout columns="auto, *, auto" *ngFor="let todo of todos | async" class="todo-item" (doubleTap)="remove(todo)">
+            <GridLayout columns="auto, *, auto" class="todo-item anim"
+                        *ngFor="let todo of todos | async | status:filter"
+                        (doubleTap)="remove(todo)">
                 <Checkbox col="0" [checked]="todo.done" (tap)="toggle(todo)"></Checkbox>
                 <Label col="1" [text]="todo.title" [class.done]="todo.done"></Label>
             </GridLayout>

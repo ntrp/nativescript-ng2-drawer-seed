@@ -11,6 +11,7 @@ import {SettingsPage} from "./pages/settings/settings.page";
 import {TodoPage} from "./pages/todo/todo.page";
 import {TodoListComponent} from "./components/todolist/todo.list.component";
 import {CheckboxComponent} from "./components/checkbox/checkbox.component";
+import {StatusPipe} from './pipes/status.pipe';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import {CheckboxComponent} from "./components/checkbox/checkbox.component";
         TodoPage,
         DrawerComponent,
         TodoListComponent,
-        CheckboxComponent
+        CheckboxComponent,
+        StatusPipe
     ],
     bootstrap: [
         AppComponent

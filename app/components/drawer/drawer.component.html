@@ -17,7 +17,8 @@
     </StackLayout>
     <StackLayout class="drawer-link"
                  orientation="horizontal"
-                 [nsRouterLink]="['/settings']">
+                 [nsRouterLink]="['/settings']"
+                 pageTransition="explode">
         <Label class="fa" text="{{'fa-cogs' | fonticon}}"></Label>
         <Label class="text" text="Settings"></Label>
     </StackLayout>
