@@ -10,3 +10,5 @@ To test the app just clone the repository and run:
 $ npm install
 $ tns run android
 ```
+
+Meteor integration under the [meteor](https://github.com/ntrp/nativescript-ng2-drawer-seed/tree/meteor) branch.
