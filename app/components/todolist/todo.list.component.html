@@ -13,7 +13,7 @@
     <ScrollView row="2">
         <StackLayout orientation="vertical" class="todo-items">
             <GridLayout columns="auto, *, auto" class="todo-item anim"
-                        *ngFor="let todo of todos | async | status:filter"
+                        *ngFor="let todo of todos | status:filter"
                         (doubleTap)="remove(todo)">
                 <Checkbox col="0" [checked]="todo.done" (tap)="toggle(todo)"></Checkbox>
                 <Label col="1" [text]="todo.title" [class.done]="todo.done"></Label>

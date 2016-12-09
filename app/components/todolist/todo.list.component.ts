@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
-import {Todos} from '../../collection/todos';
 import {Todo} from '../../model/todo';
+import {TodosService} from '../../services/todos.service';
 
 type FilterStatus = 'done' | 'active' | 'all';
 
@@ -11,43 +10,39 @@ type FilterStatus = 'done' | 'active' | 'all';
 })
 export class TodoListComponent implements OnInit {
 
-    private todos: Observable<Todo[]>;
     private next: Todo;
     private filter: FilterStatus;
 
+    constructor(private todosService: TodosService) {
+    }
+
+    get todos() {
+        return this.todosService.todos;
+    }
+
     ngOnInit(): void {
         this.setFilter('all');
-        this.initNext();
-        this.todos = Todos
-            .find({}, {sort: {_id: 1}})
-            .zone()
+        this.resetNext();
     }
 
     toggle(todo: Todo): void {
-        Todos.update(todo._id, {
-            $set: {
-                done: !todo.done
-            }
-        })
+        this.todosService.toggle(todo);
     }
 
     create(todo: Todo): void {
-        if (todo.title) {
-            Todos.insert(todo).zone().subscribe(() => {
-                this.initNext();
-            });
-        }
+        this.todosService.create(todo);
+        this.resetNext();
     }
 
     remove(todo: Todo): void {
-        Todos.remove(todo._id);
+        this.todosService.remove(todo);
     }
 
     total(): number {
-        return Todos.collection.find().count();
+        return this.todosService.total();
     }
 
-    private initNext() {
+    private resetNext() {
         this.next = {
             title: '',
             description: '',

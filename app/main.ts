@@ -1,10 +1,6 @@
 // this import should be first in order to load some required settings (like globals and reflect-metadata)
 import {platformNativeScriptDynamic} from "nativescript-angular/platform";
 
-require('nativescript-ng2-meteor/dist/meteor/index')({
-    url: 'http://127.0.0.1:3000'
-});
-
 import {AppModule} from "./app.module";
 import {StatusBar} from "./utils/native";
 

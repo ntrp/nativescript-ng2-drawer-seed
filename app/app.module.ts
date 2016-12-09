@@ -12,6 +12,7 @@ import {TodoPage} from "./pages/todo/todo.page";
 import {TodoListComponent} from "./components/todolist/todo.list.component";
 import {CheckboxComponent} from "./components/checkbox/checkbox.component";
 import {StatusPipe} from './pipes/status.pipe';
+import {TodosService} from './services/todos.service';
 
 @NgModule({
     declarations: [
@@ -36,6 +37,9 @@ import {StatusPipe} from './pipes/status.pipe';
         TNSFontIconModule.forRoot({
             'fa': 'fonts/font-awesome.css'
         })
+    ],
+    providers: [
+        TodosService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
