@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Todo} from '../../backend/model/todo';
+import {Todo} from '../model/todo';
 
 @Injectable()
 export class TodosService {
