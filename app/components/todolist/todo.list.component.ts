@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Todos} from '../../collection/todos';
 import {Todo} from '../../model/todo';
+import {KeyboardType} from "tns-core-modules/ui/enums";
+import number = KeyboardType.number;
+import {Subject} from "rxjs/Subject";
 
 type FilterStatus = 'done' | 'active' | 'all';
 
@@ -18,9 +21,7 @@ export class TodoListComponent implements OnInit {
     ngOnInit(): void {
         this.setFilter('all');
         this.initNext();
-        this.todos = Todos
-            .find({}, {sort: {_id: 1}})
-            .zone()
+        this.todos = Todos.find({}, {sort: {_id: 1}}).zone();
     }
 
     toggle(todo: Todo): void {
@@ -44,7 +45,7 @@ export class TodoListComponent implements OnInit {
     }
 
     total(): number {
-        return Todos.collection.find().count();
+        return Todos.find().cursor.count();
     }
 
     private initNext() {

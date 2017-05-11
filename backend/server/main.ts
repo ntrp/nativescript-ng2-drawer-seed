@@ -1,8 +1,6 @@
 import {Todos} from '../collection/todos';
 
 Meteor.startup(() => {
-    if (Todos.collection.find().count() > 3) return;
-
     Todos.remove({});
 
     Todos.insert({
