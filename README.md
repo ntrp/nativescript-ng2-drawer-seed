@@ -7,7 +7,6 @@ drawer support integrated and ready to be used.
 
 To test the app just clone the repository and run:
 ```shell
-$ npm install
 $ tns run android
 ```
 

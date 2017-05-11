@@ -5,3 +5,4 @@ platforms/
 *.js
 !hooks/**/*.js
 *.map
+*.lock
