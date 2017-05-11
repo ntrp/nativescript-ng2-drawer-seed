@@ -8,14 +8,7 @@
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.nativescriptng2drawerseed"
-    
-    //override supported platforms
-    // ndk {
-    //       abiFilters.clear()
-    //   		abiFilters "armeabi-v7a"
- 		// }
-  
+    applicationId = "org.nativescript.nativescriptng2drawerseed2"  
   }  
   aaptOptions {  
     additionalParameters "--no-version-vectors"  
