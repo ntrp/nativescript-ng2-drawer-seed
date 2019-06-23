@@ -6,7 +6,7 @@ type FilterStatus = 'done' | 'active' | 'all';
 
 @Component({
     selector: 'todo-list',
-    templateUrl: 'components/todolist/todo.list.component.html'
+    templateUrl: './todo.list.component.html'
 })
 export class TodoListComponent implements OnInit {
 

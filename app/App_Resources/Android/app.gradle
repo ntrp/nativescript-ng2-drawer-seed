@@ -8,7 +8,6 @@
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.nativescriptng2drawerseed2"  
   }  
   aaptOptions {  
     additionalParameters "--no-version-vectors"  
