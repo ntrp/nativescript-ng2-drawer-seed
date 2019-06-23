@@ -3,7 +3,7 @@ import {DrawerPage} from "../drawer.page";
 
 @Component({
     selector: 'home-page',
-    templateUrl: 'pages/home/home.page.html',
+    templateUrl: './home.page.html',
 })
 export class HomePage extends DrawerPage {
 

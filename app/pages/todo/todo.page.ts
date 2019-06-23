@@ -3,7 +3,7 @@ import {DrawerPage} from "../drawer.page";
 
 @Component({
     selector: 'todo-page',
-    templateUrl: 'pages/todo/todo.page.html',
+    templateUrl: './todo.page.html',
 })
 export class TodoPage extends DrawerPage {
 

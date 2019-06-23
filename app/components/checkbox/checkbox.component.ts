@@ -11,13 +11,13 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
     `
 })
 export class CheckboxComponent {
-    @Output() public tap: EventEmitter<boolean> = new EventEmitter<boolean>();
+    @Output() public myTap: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Input() public checked: boolean = false;
 
     constructor() {
     }
 
     public onTap(): void {
-        this.tap.emit(this.checked);
+        this.myTap.emit(this.checked);
     }
 }
