@@ -1,14 +1,12 @@
 {
     "compilerOptions": {
+        "outDir": "./out/tsc",
         "module": "commonjs",
         "target": "ES6",
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "sourceMap": true,
-        "types": [
-            "meteor-typings"
-        ]
+        "sourceMap": true
     },
     "exclude": [
         ".meteor",

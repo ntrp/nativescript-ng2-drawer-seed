@@ -1,6 +1,6 @@
-import * as application from "application";
-import * as platform from "platform";
-import {Color} from 'color';
+import * as application from "tns-core-modules/application";
+import * as platform from "tns-core-modules/platform";
+import {Color} from 'tns-core-modules/color';
 
 const android = application.android;
 

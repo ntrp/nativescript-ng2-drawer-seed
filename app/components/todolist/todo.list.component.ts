@@ -1,16 +1,16 @@
+import {MongoObservable} from "meteor-rxjs";
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Todos} from '../../collection/todos';
 import {Todo} from '../../model/todo';
 import {KeyboardType} from "tns-core-modules/ui/enums";
 import number = KeyboardType.number;
-import {Subject} from "rxjs/Subject";
 
 type FilterStatus = 'done' | 'active' | 'all';
 
 @Component({
     selector: 'todo-list',
-    templateUrl: 'components/todolist/todo.list.component.html'
+    templateUrl: './todo.list.component.html'
 })
 export class TodoListComponent implements OnInit {
 
@@ -21,7 +21,7 @@ export class TodoListComponent implements OnInit {
     ngOnInit(): void {
         this.setFilter('all');
         this.initNext();
-        this.todos = Todos.find({}, {sort: {_id: 1}}).zone();
+        this.todos = Todos.find({}, {sort: {_id: 1}});
     }
 
     toggle(todo: Todo): void {
@@ -34,7 +34,7 @@ export class TodoListComponent implements OnInit {
 
     create(todo: Todo): void {
         if (todo.title) {
-            Todos.insert(todo).zone().subscribe(() => {
+            Todos.insert(todo).subscribe(() => {
                 this.initNext();
             });
         }
