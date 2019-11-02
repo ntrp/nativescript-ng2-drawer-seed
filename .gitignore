@@ -1,5 +1,7 @@
 .idea/
+.migration_backup/
 node_modules/
+out/
 platforms/
 *.iml
 *.js

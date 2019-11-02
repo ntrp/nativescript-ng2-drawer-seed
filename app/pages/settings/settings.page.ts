@@ -4,7 +4,7 @@ import {Page} from "../page";
 
 @Component({
     selector: 'settings-page',
-    templateUrl: 'pages/settings/settings.page.html'
+    templateUrl: './settings.page.html'
 })
 export class SettingsPage extends Page {
 

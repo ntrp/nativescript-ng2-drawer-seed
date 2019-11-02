@@ -11,7 +11,7 @@ import {DrawerComponent} from "./components/drawer/drawer.component";
 import {TodoListComponent} from "./components/todolist/todo.list.component";
 import {CheckboxComponent} from "./components/checkbox/checkbox.component";
 import {StatusPipe} from "./pipes/status.pipe";
-import {SIDEDRAWER_DIRECTIVES} from "nativescript-telerik-ui/sidedrawer/angular";
+import {SIDEDRAWER_DIRECTIVES} from "nativescript-pro-ui/sidedrawer/angular";
 import {NativeScriptFormsModule} from "nativescript-angular";
 
 @NgModule({

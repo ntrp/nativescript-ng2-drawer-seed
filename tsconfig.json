@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "outDir": "out/tsc",
         "module": "commonjs",
         "target": "es5",
         "experimentalDecorators": true,
@@ -11,17 +12,20 @@
             "dom",
             "es2015.iterable"
         ],
+        "types": [
+            "meteor"
+        ],
         "baseUrl": ".",
         "paths": {
-            "*": [
-                "./node_modules/tns-core-modules/*",
-                "./node_modules/*"
+            "~/*": [
+                "app/*"
             ]
         }
     },
     "exclude": [
         "node_modules",
         "platforms",
-        "**/*.aot.ts"
+        "**/*.aot.ts",
+        "backend"
     ]
 }

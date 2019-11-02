@@ -1,4 +1,5 @@
 import {Todos} from '../collection/todos';
+declare const  Meteor: any; // removes annoying startup warning
 
 Meteor.startup(() => {
     Todos.remove({});

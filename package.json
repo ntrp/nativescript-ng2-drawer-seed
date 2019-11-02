@@ -6,36 +6,41 @@
   "nativescript": {
     "id": "org.nativescript.nativescriptng2drawerseed2",
     "tns-android": {
-      "version": "3.0.0"
+      "version": "6.0.0"
     }
   },
   "dependencies": {
-    "@angular/animations": "~4.1.0",
-    "@angular/common": "~4.1.0",
-    "@angular/compiler": "~4.1.0",
-    "@angular/core": "~4.1.0",
-    "@angular/forms": "~4.1.0",
-    "@angular/http": "~4.1.0",
-    "@angular/platform-browser": "~4.1.0",
-    "@angular/router": "~4.1.0",
-    "meteor-rxjs": "^0.4.7",
-    "nativescript-angular": "~3.0.0",
+    "@angular/animations": "^8.2.0",
+    "@angular/common": "^8.2.0",
+    "@angular/compiler": "^8.2.0",
+    "@angular/core": "^8.2.0",
+    "@angular/forms": "^8.2.0",
+    "@angular/http": "^7.2.15",
+    "@angular/platform-browser": "^8.2.0",
+    "@angular/platform-browser-dynamic": "^8.2.0",
+    "@angular/router": "^8.2.0",
+    "meteor-rxjs": "^0.4.14",
+    "nativescript-angular": "^8.0.3",
     "nativescript-meteor-client": "0.0.6",
     "nativescript-ng2-fonticon": "^1.3.4",
-    "nativescript-telerik-ui": "^2.0.1",
-    "nativescript-theme-core": "~1.0.2",
+    "nativescript-pro-ui": "^3.4.1",
+    "nativescript-theme-core": "^1.0.6",
+    "npm-check-updates": "^3.1.20",
     "reflect-metadata": "~0.1.8",
-    "rxjs": "~5.3.0",
-    "tns-core-modules": "~3.0.0",
-    "zone.js": "~0.8.2"
+    "rxjs": "^6.5.2",
+    "rxjs-compat": "^6.5.2",
+    "tns-core-modules": "^6.0.1",
+    "zone.js": "^0.9.1"
   },
   "devDependencies": {
-    "@types/meteor": "^1.4.1",
+    "@angular/compiler-cli": "^8.2.0",
+    "@ngtools/webpack": "^8.0.0",
+    "@types/meteor": "1.4.14",
     "babel-traverse": "6.24.1",
     "babel-types": "6.24.1",
     "babylon": "6.17.1",
     "lazy": "1.0.11",
-    "nativescript-dev-typescript": "~0.4.0",
-    "typescript": "~2.2.1"
+    "nativescript-dev-webpack": "^1.0.2",
+    "typescript": "3.4.5"
   }
 }
